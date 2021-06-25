@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import Container from './../components/Container.vue'
-import NoteCard from './../components/NoteCard.vue'
-import { useLocalNotes } from './../helper'
+import Container from 'src/components/Container.vue'
+import NoteCard from 'src/components/NoteCard.vue'
+import { useLocalNotes } from 'src/helper'
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router'
 
