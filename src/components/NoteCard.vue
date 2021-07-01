@@ -1,5 +1,5 @@
 <template>
-  <q-card flat bordered class="q-mb-sm cursor-pointer" @click="$emit('click', $event)">
+  <q-card flat bordered class="q-mb-sm cursor-pointer" @click="accessNote">
     <q-card-section class="q-pt-xs">
       <div class="text-h5 q-mt-sm q-mb-xs">
         {{ title }}
@@ -17,10 +17,13 @@ export default {
     title: String,
     decription: String
   },
-  setup () {
+  setup (props, {emit}) {
 
+    const accessNote = (event) => {
+       emit("accessNote", event.target.value)
+    }
 
-    return {}
+    return { accessNote }
   }
 }
 </script>

@@ -12,7 +12,7 @@
         :key="idx"
         :title="title"
         :description="description"
-        @click="router.push(`/note/${idx}`)">
+        @accessNote="router.push(`/note/${idx}`)">
       </NoteCard>
       <div v-if="notes.length === 0">You have not created any notes.</div>
     </Container>
